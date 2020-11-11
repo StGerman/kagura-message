@@ -1,8 +1,8 @@
 PATH
   remote: .
   specs:
-    kagura-message (0.1.1)
-      activesupport (>= 6.0.3)
+    kagura-message (0.2.0)
+      activesupport (>= 4.2)
       dry-validation (~> 1.5)
 
 GEM

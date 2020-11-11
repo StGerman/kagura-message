@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
 module Kagura
-  module Message
-    VERSION = '0.1.1'
-  end
+  VERSION = '0.2.0'
 end

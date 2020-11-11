@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'lib/kagura/message/version'
+require_relative 'lib/kagura/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'kagura-message'
-  spec.version       = Kagura::Message::VERSION
+  spec.version       = Kagura::VERSION
   spec.authors       = ['Stanislav German']
   spec.email         = ['stas.german@gmail.com']
 
