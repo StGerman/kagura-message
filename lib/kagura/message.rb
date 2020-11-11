@@ -1,6 +1,7 @@
 # frozen_string_literal: true
 
 require 'kagura/message_validator'
+require 'active_support/core_ext'
 
 class Message
   delegate :[], :merge, :as_json, :to_h, to: :@params

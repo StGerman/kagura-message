@@ -1,0 +1,23 @@
+require:
+  - rubocop-rspec
+
+AllCops:
+  NewCops: enable
+
+Style/Documentation:
+  Enabled: false
+
+RSpec/EmptyExampleGroup:
+  Enabled: false
+
+Metrics/MethodLength:
+  Max: 20
+
+RSpec/BeforeAfterAll:
+  Enabled: false
+
+RSpec/ExpectActual:
+  Enabled: false
+
+Gemspec/RequiredRubyVersion:
+  Enabled: false
