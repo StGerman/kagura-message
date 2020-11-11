@@ -13,11 +13,25 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set up Ruby 2.7.1
-      uses: actions/setup-ruby@v1
+    - name: Set up Ruby
+      uses: ruby/setup-ruby@v1
       with:
         ruby-version: 2.7.1
-
+    - uses: actions/cache@v2
+      with:
+        path: vendor/bundle
+        key: ${{ runner.os }}-gems-${{ hashFiles('**/Gemfile.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-gems-
+    - name: Install dependencies
+      run: |
+        echo ${{ secrets.GITHUB_TOKEN }}
+        bundle config path vendor/bundle
+        bundle install --jobs 4 --retry 3
+    # - name: Run tests
+    #   run: bundle exec rspec -fd
+    # - name: Run rubocop
+    #   run: bundle exec rubocop --parallel --format=simple
     - name: Publish to GPR
       run: |
         mkdir -p $HOME/.gem
@@ -28,4 +42,4 @@ jobs:
         gem push --KEY github --host https://rubygems.pkg.github.com/${OWNER} *.gem
       env:
         GEM_HOST_API_KEY: "Bearer ${{secrets.GITHUB_TOKEN}}"
-        OWNER: ${{ github.repository_owner }}
+        OWNER: StGerman
