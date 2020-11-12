@@ -2,9 +2,9 @@
 
 FactoryBot.define do
   factory :kagura_message, class: 'Kagura::Message' do
-    to { build_list(:contact, 1) }
+    to { build_list(:kagura_contact, 1) }
     cc { [] }
-    from { build(:contact) }
+    from { build(:kagura_contact) }
     subject { 'email subject' }
 
     attachments { [] }
