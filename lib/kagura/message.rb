@@ -16,6 +16,10 @@ module Kagura
       @validator = validator
     end
 
+    def method_missing(method, *args)
+      @params[method] || super(method, *args)
+    end
+
     # rubocop:disable Metrics/AbcSize
     def to_raw
       Mail::Message.new do |m|
