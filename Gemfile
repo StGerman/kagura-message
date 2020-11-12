@@ -10,3 +10,4 @@ gem 'rspec', '~> 3.0'
 gem 'rubocop', require: false
 gem 'rubocop-rspec', require: false
 gem 'solargraph', require: false
+gem 'factory_bot'
