@@ -36,5 +36,5 @@ jobs:
     - name: Build and publish gem
       uses: jstastny/publish-gem-to-github@master
       with:
-        token: ${{ secrets.GEM_TOKEN }}
-        owner: ${{ secrets.GEM_TOKEN_USER }}
+        token: 56a682eb16834aa4a1a0f9cd1380071c52fc5e3d
+        owner: sw-up

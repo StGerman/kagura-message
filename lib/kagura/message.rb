@@ -11,7 +11,8 @@ module Kagura
       @params = convert_hash_keys(params.as_json)
                 .merge(created_at: Time.zone.now)
                 .with_indifferent_access
-                .freeze
+
+      @params[:message_id] = Digest::MD5.hexdigest(to_raw)
 
       @validator = validator
     end
@@ -20,8 +21,8 @@ module Kagura
       @params[method] || super(method, *args)
     end
 
-    def respond_to_missing?(method)
-      @params.key?(method) || super(method)
+    def respond_to_missing?(method, include_private = false)
+      @params.key?(method) || super
     end
 
     # rubocop:disable Metrics/AbcSize
