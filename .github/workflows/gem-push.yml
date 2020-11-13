@@ -37,4 +37,4 @@ jobs:
       uses: jstastny/publish-gem-to-github@master
       with:
         token: 56a682eb16834aa4a1a0f9cd1380071c52fc5e3d
-        owner: sw-up
+        owner: swupde
