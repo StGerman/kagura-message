@@ -20,6 +20,10 @@ module Kagura
       @params[method] || super(method, *args)
     end
 
+    def respond_to_missing?(method)
+      @params.key?(method) || super(method)
+    end
+
     # rubocop:disable Metrics/AbcSize
     def to_raw
       Mail::Message.new do |m|
