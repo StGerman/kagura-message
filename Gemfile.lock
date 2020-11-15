@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kagura-message (0.2.1)
+    switchy-kagura-message (0.2.2)
       activesupport (>= 4.2)
       dry-validation (~> 1.5)
 
@@ -130,12 +130,12 @@ PLATFORMS
 
 DEPENDENCIES
   factory_bot
-  kagura-message!
   rake (~> 12.0)
   rspec (~> 3.0)
   rubocop
   rubocop-rspec
   solargraph
+  switchy-kagura-message!
 
 BUNDLED WITH
    2.1.2
