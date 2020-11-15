@@ -37,7 +37,7 @@ jobs:
       uses: jstastny/publish-gem-to-github@master
       with:
         token: ${{ secrets.GITHUB_TOKEN }} #56a682eb16834aa4a1a0f9cd1380071c52fc5e3d
-        owner: swupde
+        owner: StGerman
     # - name: Gem auto-tag
     #   uses: duderman/gh-gem-tag-action@v1
     # - name: Publish Gem Version to Internal Github Package Registry On Tag
