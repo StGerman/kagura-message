@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'lib/switchy/kagura_message_version'
+require_relative 'lib/switchy/version'
 
 Gem::Specification.new do |spec|
   spec.name          = 'switchy-kagura_message'
-  spec.version       = Switchy::KAGURA_MESSAGE_VERSION
+  spec.version       = Switchy::VERSION
   spec.authors       = ['Stanislav German']
   spec.email         = ['stas.german@gmail.com']
 
