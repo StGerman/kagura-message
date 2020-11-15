@@ -36,7 +36,6 @@ jobs:
     - name: Build and publish gem
       uses: jstastny/publish-gem-to-github@v1.3
       with:
-        continue-on-error: true
         token: ${{ secrets.GITHUB_TOKEN }} #56a682eb16834aa4a1a0f9cd1380071c52fc5e3d
         owner: swupde
 
