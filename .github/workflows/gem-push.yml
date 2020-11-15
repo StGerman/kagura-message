@@ -33,16 +33,13 @@ jobs:
     - name: Run rubocop
       run: bundle exec rubocop --parallel --format=simple
     - uses: actions/checkout@v1
+    - name: Gem auto-tag
+      uses: duderman/gh-gem-tag-action@v1
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        tag_prefix: v
     - name: Build and publish gem
       uses: jstastny/publish-gem-to-github@v1.3
       with:
-        token: ${{ secrets.GITHUB_TOKEN }} #56a682eb16834aa4a1a0f9cd1380071c52fc5e3d
+        token: ${{ secrets.GITHUB_TOKEN }}
         owner: swupde
-
-    # - name: Gem auto-tag
-    #   uses: duderman/gh-gem-tag-action@v1
-    # - name: Publish Gem Version to Internal Github Package Registry On Tag
-    #   uses: bodyshopbidsdotcom/gh-action-publish-gem-on-tag@1.0.0
-    #   with:
-    #     token: ${{ secrets.GITHUB_TOKEN }}
-    #     owner: swupde

@@ -3,14 +3,14 @@
 require_relative 'lib/kagura/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'kagura-message'
+  spec.name          = 'switchy-kagura-message'
   spec.version       = Kagura::VERSION
   spec.authors       = ['Stanislav German']
   spec.email         = ['stas.german@gmail.com']
 
   spec.summary       = 'Message wrapper for serialized and deserialization RFC 822 messages'
 
-  spec.homepage      = 'https://github.com/swupde/switchy-kagura-message'
+  spec.homepage      = "https://github.com/ONLYOFFICE/#{spec.name}"
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.6.6')
 
