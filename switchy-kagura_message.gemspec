@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require_relative 'lib/kagura/version'
+require_relative 'lib/switchy/kagura_message_version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'switchy-kagura-message'
-  spec.version       = Kagura::VERSION
+  spec.name          = 'switchy-kagura_message'
+  spec.version       = Switchy::KAGURA_MESSAGE_VERSION
   spec.authors       = ['Stanislav German']
   spec.email         = ['stas.german@gmail.com']
 
@@ -13,8 +13,6 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/ONLYOFFICE/#{spec.name}"
   spec.license       = 'MIT'
   spec.required_ruby_version = Gem::Requirement.new('>= 2.6.6')
-
-  # spec.metadata["allowed_push_host"] = "TODO: Set to 'http://mygemserver.com'"
 
   spec.metadata['homepage_uri'] = spec.homepage
   spec.metadata['source_code_uri'] = 'https://github.com/swupde/switchy-kagura-message'

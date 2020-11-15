@@ -2,8 +2,8 @@
 
 require 'dry-validation'
 
-module Kagura
-  class MessageValidator < Dry::Validation::Contract
+module Switchy
+  class KaguraMessageValidator < Dry::Validation::Contract
     params do
       # Requred fields
       required(:to)

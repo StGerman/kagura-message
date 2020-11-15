@@ -1,8 +1,8 @@
 # frozen_string_literal: true
 
-RSpec.describe Kagura::Message do
+RSpec.describe Switchy::KaguraMessage do
   it 'has a version number' do
-    expect(Kagura::VERSION).not_to be nil
+    expect(Switchy::KAGURA_MESSAGE_VERSION).not_to be nil
   end
 
   xit 'does something useful' do

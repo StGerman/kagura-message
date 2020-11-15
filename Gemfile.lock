@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    switchy-kagura-message (0.2.2)
+    switchy-kagura_message (0.2.3)
       activesupport (>= 4.2)
       dry-validation (~> 1.5)
 
@@ -135,7 +135,7 @@ DEPENDENCIES
   rubocop
   rubocop-rspec
   solargraph
-  switchy-kagura-message!
+  switchy-kagura_message!
 
 BUNDLED WITH
    2.1.2

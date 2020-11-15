@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
-require 'kagura/message_validator'
+require 'switchy/kagura_message_validator'
 require 'active_support/core_ext'
 
-module Kagura
-  class Message
+module Switchy
+  class KaguraMessage
     delegate :[], :merge, :as_json, :to_h, to: :@params
 
     def initialize(params, validator: MessageValidator.new)
