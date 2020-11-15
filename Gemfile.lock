@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    kagura-message (0.2.0)
+    kagura-message (0.2.1)
       activesupport (>= 4.2)
       dry-validation (~> 1.5)
 
