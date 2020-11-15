@@ -34,10 +34,12 @@ jobs:
       run: bundle exec rubocop --parallel --format=simple
     - uses: actions/checkout@v1
     - name: Build and publish gem
-      uses: jstastny/publish-gem-to-github@master
+      uses: jstastny/publish-gem-to-github@v1.3
       with:
+        continue-on-error: true
         token: ${{ secrets.GITHUB_TOKEN }} #56a682eb16834aa4a1a0f9cd1380071c52fc5e3d
-        owner: StGerman
+        owner: swupde
+
     # - name: Gem auto-tag
     #   uses: duderman/gh-gem-tag-action@v1
     # - name: Publish Gem Version to Internal Github Package Registry On Tag
