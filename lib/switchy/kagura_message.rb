@@ -7,7 +7,7 @@ module Switchy
   class KaguraMessage
     delegate :[], :merge, :as_json, :to_h, to: :@params
 
-    def initialize(params, validator: MessageValidator.new)
+    def initialize(params, validator: KaguraMessageValidator.new)
       @params = convert_hash_keys(params.as_json)
                 .merge(created_at: Time.zone.now)
                 .with_indifferent_access
