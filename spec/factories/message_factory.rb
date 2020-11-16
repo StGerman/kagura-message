@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 FactoryBot.define do
-  factory :kagura_message, class: 'Kagura::Message' do
+  factory :kagura_message, class: 'Switchy::KaguraMessage' do
     to { build_list(:kagura_contact, 1) }
     cc { [] }
     from { build(:kagura_contact) }
